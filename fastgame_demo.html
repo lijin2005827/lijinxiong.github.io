@@ -38,7 +38,7 @@
 	//登录调用
 	function GamesignIn(){
 
-		var params = {"appid":"101020115","forceLogin":"1"}
+		var params = {"appid":"100435117","forceLogin":"1"}
 	 HwFastappObject.gameLogin(JSON.stringify(params));
 // 		hbs.gameLogin({
 //     forceLogin: 1, //强制登录，未登录时会弹出登录对话框
@@ -67,7 +67,7 @@
 
 //保存用户信息至华为服务器，用于进行联运相关活动
 	function savePlayerInfo(){
-		var params = {"appid":"101020115","area":"cn","rank":"1","role":"fashi"}
+		var params = {"appid":"100435117","area":"cn","rank":"1","role":"fashi"}
 	 HwFastappObject.savePlayerInfo(JSON.stringify(params));
 	}
 
@@ -77,12 +77,12 @@
 
 
 	function showFloatWindow(){
-		var params = {"appid":"101020115"}
+		var params = {"appid":"100435117"}
 				HwFastappObject.showFloatWindow(JSON.stringify(params));
 	}
 
 	function hideFloatWindow(){
-		var params = {"appid":"101020115"}
+		var params = {"appid":"100435117"}
 				HwFastappObject.hideFloatWindow(JSON.stringify(params));
 	}
 
