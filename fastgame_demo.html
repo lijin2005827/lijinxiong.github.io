@@ -38,21 +38,21 @@
 	//登录调用
 	function GamesignIn(){
 
-// 		var params = {"appid":"100435117","forceLogin":"1"}
-// 	 HwFastappObject.gameLogin(JSON.stringify(params));
-		hbs.gameLogin({
-    forceLogin: 1, //强制登录，未登录时会弹出登录对话框
-    appid: "100435117", //appid需要与华为开发者联盟后台配置一致////101020115
-    success: function (res) {
-        console.log("game login: success");
-    },
-    fail(data, code) {
-        console.log("on gameLogin fail: " + data + "," + code);
-    },
-    complete() {
-        console.log("on gameLogin: complete");
-    }
-});
+		var params = {"appid":"100435117","forceLogin":"1"}
+	 HwFastappObject.gameLogin(JSON.stringify(params));
+// 		hbs.gameLogin({
+//     forceLogin: 1, //强制登录，未登录时会弹出登录对话框
+//     appid: "100435117", //appid需要与华为开发者联盟后台配置一致////101020115
+//     success: function (res) {
+//         console.log("game login: success");
+//     },
+//     fail(data, code) {
+//         console.log("on gameLogin fail: " + data + "," + code);
+//     },
+//     complete() {
+//         console.log("on gameLogin: complete");
+//     }
+// });
 
 	}
 
@@ -101,7 +101,7 @@
 
 //支付接口调用流程说明
 	function pay(){
-		/* 接口调用
+		//接口调用
 		var param1 = {
         "amount":prd.price,    //商品金额
         "applicationID":"100389777",    //应用ID，在华为开发者联盟上获取的APP ID
@@ -123,7 +123,7 @@ var param2 = {"orderInfo":JSON.stringify(param1)}
          HwFastappObject.onPayResult = function onPayResult(str){
                  alert("支付结果: "+str.code+",message: "+str.data);
          }
-		*/
+		
 	}
 
 
