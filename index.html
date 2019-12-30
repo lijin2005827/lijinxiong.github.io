@@ -37,8 +37,21 @@
 	}
 	//登录调用
 	function GamesignIn(){
-		var params = {"appid":"101020115","forceLogin":"1"}
-	 HwFastappObject.gameLogin(JSON.stringify(params));
+// 		var params = {"appid":"101020115","forceLogin":"1"}
+// 	 HwFastappObject.gameLogin(JSON.stringify(params));
+		hbs.gameLogin({
+    forceLogin: 1, //强制登录，未登录时会弹出登录对话框
+    appid: "101020115", //appid需要与华为开发者联盟后台配置一致
+    success: function (res) {
+        console.log("game login: success");
+    },
+    fail(data, code) {
+        console.log("on gameLogin fail: " + data + "," + code);
+    },
+    complete() {
+        console.log("on gameLogin: complete");
+    }
+});
 	}
 
 	HwFastappObject.onGameLoginResult = function onGameLoginResult(str){
